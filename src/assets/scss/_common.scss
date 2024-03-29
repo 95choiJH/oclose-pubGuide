@@ -1,0 +1,42 @@
+.logo-area {
+    position: fixed;
+    top: 5rem;
+    left: 5rem;
+    .link {
+        position: relative;
+        display: inline-block;
+        width: 25.4rem;
+        height: 22rem;
+        .split {
+            position: absolute;
+            text-align: center;
+        }
+        .logo-close {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 6rem;
+            color: #A8CD9F;
+        }
+        .logo-o {
+            width: 25.4rem;
+            font-size: 15rem;
+            color: #58A399;
+            background-color: #FCFFFC;
+        }
+        &:hover {
+            .logo-o {
+                &.top {
+                    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+                    transform: translateY(-5rem);
+                    transition: .3s ease;
+                }
+                &.bottom {
+                    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+                    transform: translateY(5rem);
+                    transition: .3s ease;
+                }
+            }
+        }
+    }
+}

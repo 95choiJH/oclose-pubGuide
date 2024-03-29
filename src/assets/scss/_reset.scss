@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-style: normal;
+    color: inherit;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    touch-action: auto;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1rem;
+}
+
+html,
+body {
+    font-family: "Fugaz One", sans-serif;
+    letter-spacing: 0;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+em,
+i,
+cite,
+code,
+address {
+    font-style: normal;
+    font-weight: normal;
+}
+
+a,
+u,
+ins {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-right: hidden;
+    border-left: hidden;
+}
+
+table caption {
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    color: transparent;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip: rect(0,0,0,0);
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+label,
+img,
+input,
+select,
+textarea,
+button,
+a {
+    vertical-align: middle;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: unset;
+    appearance: none;
+    border-radius:0;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+sub {
+	vertical-align:text-bottom;
+    font-size: smaller;
+}
+

@@ -1,0 +1,152 @@
+.logo-area {
+  position: fixed;
+  top: 5rem;
+  left: 5rem;
+}
+.logo-area .link {
+  position: relative;
+  display: inline-block;
+  width: 25.4rem;
+  height: 22rem;
+}
+.logo-area .link .split {
+  position: absolute;
+  text-align: center;
+}
+.logo-area .link .logo-close {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color: #A8CD9F;
+}
+.logo-area .link .logo-o {
+  width: 25.4rem;
+  font-size: 15rem;
+  color: #58A399;
+  background-color: #FCFFFC;
+}
+.logo-area .link:hover .logo-o.top {
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+  transform: translateY(-5rem);
+  transition: 0.3s ease;
+}
+.logo-area .link:hover .logo-o.bottom {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  transform: translateY(5rem);
+  transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-style: normal;
+  color: inherit;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  touch-action: auto;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+}
+
+html,
+body {
+  font-family: "Fugaz One", sans-serif;
+  letter-spacing: 0;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+em,
+i,
+cite,
+code,
+address {
+  font-style: normal;
+  font-weight: normal;
+}
+
+a,
+u,
+ins {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-right: hidden;
+  border-left: hidden;
+}
+
+table caption {
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  line-height: 1px;
+  font-size: 1px;
+  color: transparent;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+label,
+img,
+input,
+select,
+textarea,
+button,
+a {
+  vertical-align: middle;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: unset;
+  appearance: none;
+  border-radius: 0;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+sub {
+  vertical-align: text-bottom;
+  font-size: smaller;
+}
