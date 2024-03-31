@@ -1,0 +1,38 @@
+// ellipsis
+// @inlcude ellipsis(2);
+@mixin ellipsis($line:1) {
+    @if $line == 1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }@else{
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
+}
+
+// breakpoints
+$mobile : 320px;
+$tablet : 1024px;
+$web : 1920px;
+
+// 반응형
+@mixin mobile {
+    @media (max-width:#{$tablet - 1}){
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width:#{$tablet}) and (max-width:#{$web - 1}){
+        @content;
+    }
+}
+@mixin web {
+    @media (min-width:#{$web}) {
+        @content;
+    }
+}
+

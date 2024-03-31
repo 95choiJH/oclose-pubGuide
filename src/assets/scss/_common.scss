@@ -1,40 +1,172 @@
-.logo-area {
-    position: fixed;
-    top: 5rem;
-    left: 5rem;
-    .link {
+.section {
+    &.component {
+        display: flex;
+        flex-direction: column;
         position: relative;
-        display: inline-block;
-        width: 25.4rem;
-        height: 22rem;
-        .split {
-            position: absolute;
-            text-align: center;
-        }
-        .logo-close {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 6rem;
-            color: #A8CD9F;
-        }
-        .logo-o {
-            width: 25.4rem;
-            font-size: 15rem;
-            color: #58A399;
-            background-color: #FCFFFC;
-        }
-        &:hover {
-            .logo-o {
-                &.top {
-                    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
-                    transform: translateY(-5rem);
-                    transition: .3s ease;
+        padding: 2rem;
+        height: 100vh;
+        background-color: #FBF5F3;
+        .i_component {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            .a_side {
+                position: relative;
+                height: 100%;
+                max-width: 20rem;
+                .i_side{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    .a_top {
+                        .a_logo {
+                            position: relative;
+                            text-align: center;
+                            // border-right: .1rem solid #000022;
+                            .logo {
+                                display: inline-block;
+                                font-family: "Saira Stencil One", sans-serif;
+                                font-size: 12.5rem;
+                                line-height: 12.5rem;
+                                color: #091540;
+                                transform: skew(10deg, 15deg);
+                                @include mobile {
+                                    font-size: 3.5rem;
+                                    line-height: 3.5rem;
+                                }
+                            }
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: -2rem;
+                                display: block;
+                                width: 100%;
+                                height: 0.1rem;
+                                background-color: #000022;
+                            }
+                        }
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 0.1rem;
+                            height: 12.5rem;
+                            background-color: #000022;
+                            @include mobile {
+                                height: 4.5rem;
+                            }
+                        }
+                        +.a_bottom {
+                            margin-top: 4rem;
+                            @include mobile {
+                                margin-top: 3rem;
+                            }
+                        }
+                    }
+                    .a_bottom {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        border-right: .1rem solid #000022;
+                        .a_menu {
+                            flex: 1;
+                            width: 20rem;
+                            @include mobile {
+                                width: 10rem;
+                            }
+                        }
+                        .copyright {
+                            display: inline-block;
+                            font-size: 2rem;
+                            line-height: 2rem;
+                            color: #091540;
+                            @include mobile {
+                                display: none;
+                            }
+                        }
+                    }
+                    .a_btn {
+                        position: absolute;
+                        top: 13.15rem;
+                        right: -1.2rem;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        z-index: 10;
+                        @include mobile {
+                            display: none;
+                        }
+                        .btn {
+                            &.change-form {
+                                display: inline-block;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                                background-color: #091540;
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-image: url('../images/icon/icon_arrow1.svg');
+                                    background-repeat: no-repeat;
+                                    background-position: 0.5rem center;
+                                    transform: rotate(225deg);
+                                }
+                            }
+                        }
+                    }
                 }
-                &.bottom {
-                    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-                    transform: translateY(5rem);
-                    transition: .3s ease;
+            }
+            .a_component {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .a_header {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    .a_tit {
+                        flex: 1;
+                        padding-left: 4rem;
+                        @include mobile {
+                            padding-left: 3rem;
+                        }
+                        .cate {
+                            font-size: 3.9rem;
+                            line-height: 4.1rem;
+                            color: #7692FF;
+                            @include mobile {
+                                display: none;
+                            }
+                        }
+                        .tit {
+                            font-size: 8.4rem;
+                            line-height: 8.4rem;
+                            color: #3D518C;
+                            @include mobile {
+                                font-size: 3.5rem;
+                                line-height: 3.5rem;
+                            }
+                        }
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -2rem;
+                        display: block;
+                        width: 100%;
+                        height: 0.1rem;
+                        background-color: #000022;
+                    }
+                    +.a_contents {
+                        height: 100%;
+                        margin-top: 4rem;
+                    }
+                }
+                .a_contents {
+                    padding: 2rem;
                 }
             }
         }

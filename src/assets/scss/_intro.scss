@@ -1,0 +1,61 @@
+ .section {
+    &.intro {
+        height: 100vh;
+        background-color: #FFFFFA;
+        overflow: hidden;
+        .i_intro {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 192rem;
+            height: 100%;
+            padding: 2rem 3.5rem;
+            margin: 0 auto;
+            @include mobile {
+                padding: 2rem 2rem;
+            }
+            .a_tit {
+                .tit{
+                    font-size: 18.8rem;
+                    line-height: 17.2rem;
+                    color: #3D518C;
+                    @include mobile {
+                        font-size: 6.2rem;
+                        line-height: 6.4rem;
+                    }
+                }
+            }
+            .a_txt {
+                .txt {
+                    display: block;
+                    font-size: 6.4rem;
+                    line-height: 6.6rem;
+                    color: #7692FF;
+                    @include mobile {
+                        font-size: 2.6rem;
+                        line-height: 2.8rem;
+                    }
+                }
+            }
+            .a_logo {
+                position: absolute;
+                right: 3.5rem;
+                bottom: 0;
+                @include mobile {
+                    right: 2rem;
+                }
+                .logo {
+                    font-family: "Saira Stencil One", sans-serif;
+                    font-size: 37rem;
+                    line-height: 35rem;
+                    color: #091540;
+                    @include mobile {
+                        font-size: 8.8rem;
+                        line-height: 11.5rem;
+                    }
+                }
+            }
+        }
+    }
+ }

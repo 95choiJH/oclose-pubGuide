@@ -1,0 +1,232 @@
+.logo-area {
+  position: fixed;
+  top: 5rem;
+  left: 5rem;
+}
+
+.logo-area .link {
+  position: relative;
+  display: inline-block;
+  width: 25.4rem;
+  height: 22rem;
+}
+
+.logo-area .link .split {
+  position: absolute;
+  text-align: center;
+}
+
+.logo-area .link .logo-close {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color: #A8CD9F;
+}
+
+.logo-area .link .logo-o {
+  width: 25.4rem;
+  font-size: 15rem;
+  color: #58A399;
+  background-color: #FCFFFC;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.logo-area .link .logo-o.top {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 55%, 0 55%);
+          clip-path: polygon(0 0, 100% 0, 100% 55%, 0 55%);
+}
+
+.logo-area .link .logo-o.bottom {
+  -webkit-clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+          clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+}
+
+.logo-area .link:hover .logo-o.top {
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
+}
+
+.logo-area .link:hover .logo-o.bottom {
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+body {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+em,
+i,
+cite,
+code,
+address {
+  font-style: normal;
+  font-weight: normal;
+}
+
+a,
+u,
+ins {
+  text-decoration: none;
+  color: inherit;
+}
+
+table caption {
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  line-height: 1px;
+  font-size: 1px;
+  color: transparent;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+label,
+img,
+input,
+select,
+textarea,
+button,
+a {
+  vertical-align: middle;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: unset;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+sub {
+  vertical-align: text-bottom;
+  font-size: smaller;
+}
+
+.section.intro {
+  background-color: #58A399;
+  overflow: hidden;
+}
+
+.section.intro .i_intro {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+  padding: 2rem 3.5rem;
+}
+
+.section.intro .i_intro .a_tit .tit {
+  font-size: 19.2rem;
+  line-height: 19.4rem;
+  color: #A8CD9F;
+}
+
+.section.intro .i_intro .a_txt .txt {
+  display: block;
+  font-size: 8rem;
+  color: #A8CD9F;
+}
+
+.section.intro .i_intro .a_logo {
+  position: absolute;
+  right: 3.5rem;
+  bottom: 2rem;
+}
+
+.section.intro .i_intro .a_logo .logo {
+  font-family: "Saira Stencil One", sans-serif;
+  font-size: 48rem;
+  line-height: 3.7rem;
+  color: #A8CD9F;
+}
+/*# sourceMappingURL=style.css.map */
