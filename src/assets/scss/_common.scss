@@ -1,11 +1,9 @@
 .section {
     &.component {
-        display: flex;
-        flex-direction: column;
         position: relative;
         padding: 2rem;
         height: 100vh;
-        background-color: #FBF5F3;
+        background-color: #fff;
         .i_component {
             display: flex;
             width: 100%;
@@ -23,7 +21,6 @@
                         .a_logo {
                             position: relative;
                             text-align: center;
-                            // border-right: .1rem solid #000022;
                             .logo {
                                 display: inline-block;
                                 font-family: "Saira Stencil One", sans-serif;
@@ -120,8 +117,6 @@
                 }
             }
             .a_component {
-                display: flex;
-                flex-direction: column;
                 width: 100%;
                 .a_header {
                     position: relative;
@@ -161,7 +156,6 @@
                         background-color: #000022;
                     }
                     +.a_contents {
-                        height: 100%;
                         margin-top: 4rem;
                     }
                 }
