@@ -64,3 +64,13 @@ function detailView() {
         })
     })
 }
+
+function filterBtn() {
+    const filterBtn = document.querySelectorAll('.a_header .a_filter .btn')
+
+    filterBtn.forEach(btn => {
+        btn.addEventListener("click", function() {
+            this.classList.toggle('active')
+        })
+    });
+}

@@ -1,9 +1,19 @@
 .swiperCustom {
+    height: 100%;
     &.d1 {
         &.base {
-            max-width: 164rem;
             .a_swiper {
                 position: relative;
+                height: 100%;
+                .w_swiper {
+                    .s_swiper {
+                        height: auto;
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
                 .w_pagination {
                     position: absolute;
                     top: 50%;
