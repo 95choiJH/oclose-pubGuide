@@ -1,15 +1,97 @@
-.progress-bar {
-  stroke-dashoffset: 230;
-  stroke-dasharray: 100;
+@font-face {
+  font-weight: 700;
+  font-family: "Pretendard";
+  src: url("../../fonts/Pretendard/Pretendard-Bold.subset.woff2") format("woff2"), url("../../fonts/Pretendard/Pretendard-Bold.subset.woff") format("woff"), url("../../fonts/Pretendard/Pretendard-Bold.ttf") format("ttf"), url("../../fonts/Pretendard/Pretendard-Bold.otf") format("eot");
+  font-style: normal;
+}
+@font-face {
+  font-weight: 600;
+  font-family: "Pretendard";
+  src: url("../../fonts/Pretendard/Pretendard-SemiBold.subset.woff2") format("woff2"), url("../../fonts/Pretendard/Pretendard-SemiBold.subset.woff") format("woff"), url("../../fonts/Pretendard/Pretendard-SemiBold.ttf") format("ttf"), url("../../fonts/Pretendard/Pretendard-SemiBold.otf") format("eot");
+  font-style: normal;
+}
+@font-face {
+  font-weight: 400;
+  font-family: "Pretendard";
+  src: url("../../fonts/Pretendard/Pretendard-Regular.subset.woff2") format("woff2"), url("../../fonts/Pretendard/Pretendard-Regular.subset.woff") format("woff"), url("../../fonts/Pretendard/Pretendard-Regular.ttf") format("ttf"), url("../../fonts/Pretendard/Pretendard-Regular.otf") format("eot");
+  font-style: normal;
+}
+@font-face {
+  font-weight: 300;
+  font-family: "Pretendard";
+  src: url("../../fonts/Pretendard/Pretendard-Light.subset.woff2") format("woff2"), url("../../fonts/Pretendard/Pretendard-Light.subset.woff") format("woff"), url("../../fonts/Pretendard/Pretendard-Light.ttf") format("ttf"), url("../../fonts/Pretendard/Pretendard-Light.otf") format("eot");
+  font-style: normal;
+}
+.swiperCustom.d1.base {
+  max-width: 164rem;
+}
+.swiperCustom.d1.base .a_swiper {
+  position: relative;
+}
+.swiperCustom.d1.base .a_swiper .w_pagination {
+  position: absolute;
+  top: 50%;
+  left: 6rem;
+  width: 4rem;
+  height: 32rem;
+  transform: translateY(-50%);
+  background-color: rgba(77, 74, 67, 0.5);
+  border-radius: 4rem;
+  z-index: 10;
+}
+.swiperCustom.d1.base .a_swiper .w_pagination .a_progress {
+  display: flex;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.swiperCustom.d1.base .a_swiper .w_pagination .a_progress .swiper-pagination-current {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-family: "Roboto", sans-serif;
+}
+.swiperCustom.d1.base .a_swiper .w_pagination .a_progress .a_button {
+  position: relative;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.swiperCustom.d1.base .a_swiper .w_pagination .a_progress .a_button .remote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.swiperCustom.d1.base .a_swiper .w_pagination .progress-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.1rem;
+  height: 21.4rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.swiperCustom.d1.base .a_swiper .w_pagination .progress-bar .progress {
+  --progress: 0;
+  width: 0.2rem;
+  height: 21.4rem;
+  stroke-dasharray: 230;
+  stroke-dashoffset: calc(230 * (1 - var(--progress)));
 }
 
 .section.component {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  padding: 2rem;
   height: 100vh;
-  background-color: #FFFFFA;
+  padding: 2rem;
+  background-color: rgb(255, 255, 255);
 }
 .section.component .i_component {
   display: flex;
@@ -22,10 +104,10 @@
   max-width: 20rem;
 }
 .section.component .i_component .a_side .i_side {
-  position: relative;
   display: flex;
-  flex-direction: column;
+  position: relative;
   height: 100%;
+  flex-direction: column;
 }
 .section.component .i_component .a_side .i_side .a_top .a_logo {
   position: relative;
@@ -33,10 +115,10 @@
 }
 .section.component .i_component .a_side .i_side .a_top .a_logo .logo {
   display: inline-block;
-  font-family: "Saira Stencil One", sans-serif;
+  color: rgb(9, 21, 64);
   font-size: 12.5rem;
   line-height: 12.5rem;
-  color: #091540;
+  font-family: "Saira Stencil One", sans-serif;
   transform: skew(10deg, 15deg);
 }
 @media (max-width: 1023px) {
@@ -46,22 +128,22 @@
   }
 }
 .section.component .i_component .a_side .i_side .a_top .a_logo::after {
-  content: "";
+  display: block;
   position: absolute;
   bottom: -2rem;
-  display: block;
   width: 100%;
   height: 0.1rem;
-  background-color: #000022;
+  content: "";
+  background-color: rgb(0, 0, 34);
 }
 .section.component .i_component .a_side .i_side .a_top::after {
-  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 0.1rem;
   height: 12.5rem;
-  background-color: #000022;
+  content: "";
+  background-color: rgb(0, 0, 34);
 }
 @media (max-width: 1023px) {
   .section.component .i_component .a_side .i_side .a_top::after {
@@ -78,13 +160,13 @@
 }
 .section.component .i_component .a_side .i_side .a_bottom {
   display: flex;
-  flex-direction: column;
   height: 100%;
-  border-right: 0.1rem solid #000022;
+  flex-direction: column;
+  border-right: 0.1rem solid rgb(0, 0, 34);
 }
 .section.component .i_component .a_side .i_side .a_bottom .a_menu {
-  flex: 1;
   width: 20rem;
+  flex: 1;
 }
 @media (max-width: 1023px) {
   .section.component .i_component .a_side .i_side .a_bottom .a_menu {
@@ -93,53 +175,21 @@
 }
 .section.component .i_component .a_side .i_side .a_bottom .copyright {
   display: inline-block;
+  color: #091540;
   font-size: 2rem;
   line-height: 2rem;
-  color: #091540;
 }
 @media (max-width: 1023px) {
   .section.component .i_component .a_side .i_side .a_bottom .copyright {
     display: none;
   }
 }
-.section.component .i_component .a_side .i_side .a_btn {
-  position: absolute;
-  top: 13.15rem;
-  right: -1.2rem;
-  width: 2.4rem;
-  height: 2.4rem;
-  z-index: 10;
-}
-@media (max-width: 1023px) {
-  .section.component .i_component .a_side .i_side .a_btn {
-    display: none;
-  }
-}
-.section.component .i_component .a_side .i_side .a_btn .btn.change-form {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #091540;
-}
-.section.component .i_component .a_side .i_side .a_btn .btn.change-form::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/icon/icon_arrow1.svg");
-  background-repeat: no-repeat;
-  background-position: 0.5rem center;
-  transform: rotate(225deg);
-}
 .section.component .i_component .a_component {
-  display: flex;
-  flex-direction: column;
   width: 100%;
 }
 .section.component .i_component .a_component .a_header {
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
 }
 .section.component .i_component .a_component .a_header .a_tit {
@@ -152,9 +202,9 @@
   }
 }
 .section.component .i_component .a_component .a_header .a_tit .cate {
+  color: rgb(118, 146, 255);
   font-size: 3.9rem;
   line-height: 4.1rem;
-  color: #7692FF;
 }
 @media (max-width: 1023px) {
   .section.component .i_component .a_component .a_header .a_tit .cate {
@@ -162,9 +212,9 @@
   }
 }
 .section.component .i_component .a_component .a_header .a_tit .tit {
+  color: rgb(61, 81, 140);
   font-size: 8.4rem;
   line-height: 8.4rem;
-  color: #3D518C;
 }
 @media (max-width: 1023px) {
   .section.component .i_component .a_component .a_header .a_tit .tit {
@@ -173,20 +223,126 @@
   }
 }
 .section.component .i_component .a_component .a_header::after {
-  content: "";
+  display: block;
   position: absolute;
   bottom: -2rem;
-  display: block;
   width: 100%;
   height: 0.1rem;
-  background-color: #000022;
+  content: "";
+  background-color: rgb(0, 0, 34);
 }
 .section.component .i_component .a_component .a_header + .a_contents {
-  height: 100%;
   margin-top: 4rem;
 }
 .section.component .i_component .a_component .a_contents {
+  position: relative;
+  padding: 0 2rem;
+}
+.section.component .i_component .a_component .a_contents .l_contents {
+  position: relative;
+}
+.section.component .i_component .a_component .a_contents .l_contents .w_guide-detail {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  z-index: 10;
+}
+.section.component .i_component .a_component .a_contents .l_contents .w_guide-detail .a_button {
+  display: block;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.8rem;
+}
+.section.component .i_component .a_component .a_contents .l_contents .w_guide-detail .a_button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+  box-sizing: content-box;
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_guide-detailView {
+  display: flex;
+  padding: 3rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border-top: 0.2rem solid transparent;
+  border-bottom: 0.2rem solid transparent;
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_guide-detailView .l_guide-detailViewList {
+  width: 46.5rem;
   padding: 2rem;
+  border-bottom: 0.1rem solid rgba(9, 21, 64, 0.5);
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_guide-detailView .l_guide-detailViewList .list ~ .list {
+  padding-top: 1rem;
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_guide-detailView .l_guide-detailViewList .tit,
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_guide-detailView .l_guide-detailViewList .content {
+  font-family: "Pretendard";
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_guide-detailView .l_guide-detailViewList .tit {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_guide-detailView .l_guide-detailViewList .w_contents {
+  display: flex;
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_guide-detailView .l_guide-detailViewList .w_contents .content {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_guide-detailView .l_guide-detailViewList .w_contents .content + .content::before {
+  margin: 0 1rem;
+  color: rgb(200, 200, 200);
+  font-size: 1.4rem;
+  content: "|";
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_btn {
+  display: flex;
+  position: absolute;
+  top: 4.4rem;
+  right: 3rem;
+  width: 9.2rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_btn .l_btn {
+  position: relative;
+  height: 3.2rem;
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_btn .l_btn svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView .w_btn .l_btn.hidden {
+  display: none;
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView.active {
+  padding-top: 1rem;
+  opacity: 1;
+}
+.section.component .i_component .a_component .a_contents .l_contents .a_guide-detailView.active .w_guide-detailView {
+  border-color: rgb(9, 21, 64);
 }
 
 html, body, div, span, applet, object, iframe,

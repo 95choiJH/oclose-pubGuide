@@ -1,9 +1,9 @@
 .section {
     &.component {
         position: relative;
-        padding: 2rem;
         height: 100vh;
-        background-color: #fff;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 1);
         .i_component {
             display: flex;
             width: 100%;
@@ -13,20 +13,20 @@
                 height: 100%;
                 max-width: 20rem;
                 .i_side{
-                    position: relative;
                     display: flex;
-                    flex-direction: column;
+                    position: relative;
                     height: 100%;
+                    flex-direction: column;
                     .a_top {
                         .a_logo {
                             position: relative;
                             text-align: center;
                             .logo {
                                 display: inline-block;
-                                font-family: "Saira Stencil One", sans-serif;
+                                color: rgba(9, 21, 64, 1);
                                 font-size: 12.5rem;
                                 line-height: 12.5rem;
-                                color: #091540;
+                                font-family: "Saira Stencil One", sans-serif;
                                 transform: skew(10deg, 15deg);
                                 @include mobile {
                                     font-size: 3.5rem;
@@ -34,23 +34,23 @@
                                 }
                             }
                             &::after {
-                                content: '';
+                                display: block;
                                 position: absolute;
                                 bottom: -2rem;
-                                display: block;
                                 width: 100%;
                                 height: 0.1rem;
-                                background-color: #000022;
+                                content: '';
+                                background-color: rgba(0, 0, 34, 1);
                             }
                         }
                         &::after {
-                            content: '';
                             position: absolute;
                             top: 0;
                             right: 0;
                             width: 0.1rem;
                             height: 12.5rem;
-                            background-color: #000022;
+                            content: '';
+                            background-color: rgba(0, 0, 34, 1);
                             @include mobile {
                                 height: 4.5rem;
                             }
@@ -64,21 +64,21 @@
                     }
                     .a_bottom {
                         display: flex;
-                        flex-direction: column;
                         height: 100%;
-                        border-right: .1rem solid #000022;
+                        flex-direction: column;
+                        border-right: .1rem solid rgba(0, 0, 34, 1);
                         .a_menu {
-                            flex: 1;
                             width: 20rem;
+                            flex: 1;
                             @include mobile {
                                 width: 10rem;
                             }
                         }
                         .copyright {
                             display: inline-block;
+                            color: #091540;
                             font-size: 2rem;
                             line-height: 2rem;
-                            color: #091540;
                             @include mobile {
                                 display: none;
                             }
@@ -89,8 +89,8 @@
             .a_component {
                 width: 100%;
                 .a_header {
-                    position: relative;
                     display: flex;
+                    position: relative;
                     flex-direction: column;
                     .a_tit {
                         flex: 1;
@@ -99,17 +99,17 @@
                             padding-left: 3rem;
                         }
                         .cate {
+                            color: rgba(118, 146, 255, 1);
                             font-size: 3.9rem;
                             line-height: 4.1rem;
-                            color: #7692FF;
                             @include mobile {
                                 display: none;
                             }
                         }
                         .tit {
+                            color: rgba(61, 81, 140, 1);
                             font-size: 8.4rem;
                             line-height: 8.4rem;
-                            color: #3D518C;
                             @include mobile {
                                 font-size: 3.5rem;
                                 line-height: 3.5rem;
@@ -117,13 +117,13 @@
                         }
                     }
                     &::after {
-                        content: '';
+                        display: block;
                         position: absolute;
                         bottom: -2rem;
-                        display: block;
                         width: 100%;
                         height: 0.1rem;
-                        background-color: #000022;
+                        content: '';
+                        background-color: rgba(0, 0, 34, 1);
                     }
                     +.a_contents {
                         margin-top: 4rem;
@@ -131,24 +131,116 @@
                 }
                 .a_contents {
                     position: relative;
-                    padding: 2rem;
-                    .w_guide-detail {
-                        position: absolute;
-                        top: 3rem;
-                        right: 3rem;
-                        z-index: 10;
-                        .a_button {
-                            display: block;
-                            width: 3rem;
-                            height: 3rem;
-                            background-color: #000;
-                            border-radius: .8rem;
+                    padding: 0 2rem;
+                    .l_contents {
+                        position: relative;
+                        .w_guide-detail {
+                            position: absolute;
+                            top: 3rem;
+                            right: 3rem;
+                            z-index: 10;
+                            .a_button {
+                                display: block;
+                                position: relative;
+                                width: 3rem;
+                                height: 3rem;
+                                background-color: rgba(0, 0, 0, 1);
+                                border-radius: .8rem;
+                                svg {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                }
+                            }
                         }
-                    }
-                    .w_guide-detailView {
-                        width: 100vw;
-                        height: 100vh;
-                        background-color: rgba(0, 0, 0, 0.3);
+                        .a_guide-detailView {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 0;
+                            background-color: rgba(255, 255, 255, 1);
+                            z-index: 10;
+                            overflow: hidden;
+                            opacity: 0;
+                            transition: .3s ease;
+                            box-sizing: content-box;
+                            .w_guide-detailView {
+                                display: flex;
+                                padding: 3rem;
+                                flex-wrap: wrap;
+                                gap: 2rem;
+                                border-top: .2rem solid transparent;
+                                border-bottom: .2rem solid transparent;
+                                .l_guide-detailViewList {
+                                    width: 46.5rem;
+                                    padding: 2rem;
+                                    border-bottom: .1rem solid rgba(9, 21, 64, 0.5);
+                                    .list {
+                                        ~.list {
+                                            padding-top: 1rem;
+                                        }
+                                    }
+                                    .tit,
+                                    .content {
+                                        font-family: "Pretendard";
+                                    }
+                                    .tit {
+                                        font-weight: 700;
+                                        font-size: 1.6rem;
+                                        line-height: 2.4rem;
+                                    }
+                                    .w_contents {
+                                        display: flex;
+                                        .content {
+                                            font-weight: 400;
+                                            font-size: 1.8rem;
+                                            line-height: 2.7rem;
+                                            +.content {
+                                                &::before {
+                                                    margin: 0 1rem;
+                                                    color: rgb(200, 200, 200);
+                                                    font-size: 1.4rem;
+                                                    content: '|';
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .w_btn {
+                                display: flex;
+                                position: absolute;
+                                top: 4.4rem;
+                                right: 3rem;
+                                width: 9.2rem;
+                                flex-direction: column;
+                                gap: 0.5rem;
+                                .l_btn {
+                                    position: relative;
+                                    height: 3.2rem;
+                                    svg {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        width: 100%;
+                                        height: 100%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                                    &.hidden {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            &.active {
+                                padding-top: 1rem;
+                                opacity: 1;
+                                .w_guide-detailView {
+                                    border-color: rgba(9, 21, 64, 1);
+                                }
+                            }
+                        }
                     }
                 }
             }
