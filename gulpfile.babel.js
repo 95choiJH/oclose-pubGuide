@@ -16,19 +16,19 @@ const SRC_FOLDER = "./src/";
 const DIST_FOLDER = "./dist";
 
 const SRC_PATH = {
-    ASSETS: {
-      FONTS: "./src/assets/fonts",
-      IMAGES: "./src/assets/images",
-      SCSS: "./src/assets/scss",
-      JS: "./src/assets/js",
-      AJAX: "./src/assets/ajax",
-      MODULES: "./src/assets/modules",
-      DOC: "./src/assets/doc",
-      GLTF: "./src/assets/gltf",
-      MOVIES: "./src/assets/movies",
-    },
-    EJS: "./src/ejs",
+  ASSETS: {
+    FONTS: "./src/assets/fonts",
+    IMAGES: "./src/assets/images",
+    SCSS: "./src/assets/scss",
+    JS: "./src/assets/js",
+    AJAX: "./src/assets/ajax",
+    MODULES: "./src/assets/modules",
+    DOC: "./src/assets/doc",
+    GLTF: "./src/assets/gltf",
+    MOVIES: "./src/assets/movies",
   },
+  EJS: "./src/ejs",
+},
   DEST_PATH = {
     ASSETS: {
       FONTS: "./dist/assets/fonts",
@@ -50,12 +50,12 @@ const SRC_PATH = {
     precision: 8,
   };
 
-gulp.task("clean", function() {
+gulp.task("clean", function () {
   return del(["dist"]);
 });
 
 gulp.task('html', () => {
-  return gulp.src([ SRC_FOLDER + '**/*.html' ], {
+  return gulp.src([SRC_FOLDER + '**/*.html'], {
     base: SRC_FOLDER,
     since: gulp.lastRun('html')
   })
@@ -72,7 +72,7 @@ gulp.task("ejs", function () {
       prefix: '@@', //사용할땐 앞에@@ 를 붙이면됨
       basepath: '@file',
     }))
-    .pipe(htmlbeautify({indentSize: 2}))
+    .pipe(htmlbeautify({ indentSize: 2 }))
     .pipe(gulp.dest(DIST_FOLDER))
     .pipe(browserSync.stream());
 });
@@ -159,9 +159,9 @@ gulp.task("watch", function () {
   gulp.watch(SRC_PATH.ASSETS.JS + "/*.js", gulp.series("js"));
   gulp.watch(SRC_PATH.ASSETS.AJAX + "/*.js", gulp.series("ajax"));
   gulp.watch(SRC_PATH.ASSETS.MODULES + "/*.js", gulp.series("modules"));
-  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)",gulp.series("images"));
+  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)", gulp.series("images"));
   gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", gulp.series("svg"));
-  gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)",gulp.series("fonts"));
+  gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)", gulp.series("fonts"));
   gulp.watch(SRC_PATH.ASSETS.DOC + "/**/*", gulp.series("doc"));
   gulp.watch(SRC_PATH.ASSETS.GLTF + "/**/*", gulp.series("gltf"));
   gulp.watch(SRC_PATH.ASSETS.MOVIES + "/*", gulp.series("movies"));
@@ -172,7 +172,6 @@ gulp.task("browserSync", function () {
     port: 3000,
     server: {
       baseDir: ["dist"],
-      index: "/guide/intro/intro.html",
       open: true,
     },
   });
@@ -180,7 +179,7 @@ gulp.task("browserSync", function () {
 
 gulp.task(
   "build",
-  gulp.series('html',"ejs","scss:compile","js","ajax","modules","images","svg","fonts","doc","gltf","movies", gulp.parallel("browserSync", "watch"))
+  gulp.series('html', "ejs", "scss:compile", "js", "ajax", "modules", "images", "svg", "fonts", "doc", "gltf", "movies", gulp.parallel("browserSync", "watch"))
 );
 
 gulp.task(
