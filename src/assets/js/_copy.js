@@ -1,7 +1,9 @@
-var copySwiper = {
+var currentClass, controlBtnSvg;
+export const copy = {
+    // swiper
     SwiperD1Base: [
         {
-            HTML: `
+            HTML_PC: `
             <div class="swiperCustom d1 base">
                 <div class="swiper a_swiper">
                     <div class="swiper-wrapper w_swiper">
@@ -49,7 +51,7 @@ var copySwiper = {
                 </div>
             </div>
             `,
-            SCSS: `
+            SCSS_PC: `
             .section {
                 &.component {
                     position: relative;
@@ -316,9 +318,9 @@ var copySwiper = {
                         renderFraction: function (currentClass) {
                             const controlBtnSvg = \`<svg class="remote" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="5" width="4" height="14" rx="1" fill="#ffffff"/><rect x="14" y="5" width="4" height="14" rx="1" fill="#ffffff"/></svg>\`
                             return \`
-                                <span class="${currentClass}"></span>
+                                <span class="\${currentClass}></span>
                                 <div class="swiper-controller">
-                                    <button class="a_button">${controlBtnSvg}</button>
+                                    <button class="a_button">\${controlBtnSvg}</button>
                                 </div>
                             \`
                         }

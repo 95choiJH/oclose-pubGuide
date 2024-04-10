@@ -3,7 +3,7 @@ guideCommon.Html = (function () {
     var instance = null
     function init() {
         instance = {
-            reset: function () {}
+            reset: function () { }
         }
         return instance
     }
@@ -15,11 +15,11 @@ guideCommon.Html = (function () {
 })()
 
 function guideCommonResize() {
-    window.addEventListener('resize', () => {})
+    window.addEventListener('resize', () => { })
 }
 
 function guideCommonScroll() {
-    window.addEventListener('scroll', () => {})
+    window.addEventListener('scroll', () => { })
 }
 
 function detailView() {
@@ -50,9 +50,7 @@ function detailView() {
 
     //Copy 기능
     const detailViewArea = document.querySelector('.a_contents')
-    console.log(detailViewArea)
     const componentName = detailViewArea.getAttribute('data-comp')
-    console.log(componentName)
     const copyBtn = detailViewArea.querySelectorAll('.l_btn')
 
     copyBtn.forEach(btn => {
@@ -69,7 +67,7 @@ function filterBtn() {
     const filterBtn = document.querySelectorAll('.a_header .a_filter .btn')
 
     filterBtn.forEach(btn => {
-        btn.addEventListener("click", function() {
+        btn.addEventListener("click", function () {
             this.classList.toggle('active')
         })
     });

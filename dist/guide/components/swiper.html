@@ -19,8 +19,15 @@
         })
     </script>
 
-    <script src="../../assets/js/_swiper.js"></script>
     <script src="../../assets/js/_common.js"></script>
+    <!-- <script src="../../assets/js/_copy.js"></script> -->
+    <script src="../../assets/js/_swiper.js"></script>
+    <script type="module">
+        import {
+            copyFunction
+        } from '../../assets/js/_button.js';
+        copyFunction();
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             detailView();
@@ -65,6 +72,11 @@
                         </div>
                     </div>
                 </article>
+                <div class="a_popup copyPop">
+                    <div class="w_popup">
+                        <p class="txt">코드가 성공적으로 복사되었습니다.</p>
+                    </div>
+                </div>
                 <article class="article a_component">
                     <div class="a_header">
                         <div class="a_tit">
