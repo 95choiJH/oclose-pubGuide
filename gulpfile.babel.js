@@ -170,8 +170,9 @@ gulp.task("watch", function () {
 gulp.task("browserSync", function () {
   browserSync.init({
     port: 3000,
+    startPath: '/dist/index.html',
     server: {
-      baseDir: ["dist"],
+      baseDir: './',
       open: true,
     },
   });
