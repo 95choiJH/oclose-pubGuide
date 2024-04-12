@@ -1,5 +1,5 @@
 
-import { copy } from './_copy.js'
+import { copy } from './copy.js'
 
 // 가이드 복사 버튼 기능
 export function copyFunction() {
