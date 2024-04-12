@@ -1,0 +1,127 @@
+.tab {
+    &.d1 {
+        &.base {
+            width: 100%;
+            max-width: 120rem;
+
+            .w_tab {
+                display: flex;
+
+                .l_tab {
+                    flex: 1;
+                    border: .1rem solid rgba(255, 255, 255, 1);
+                    text-align: center;
+
+                    .btn {
+                        display: inline-block;
+                        width: 100%;
+                        background-color: rgba(239, 235, 221, 1);
+
+                        .txt {
+                            font-size: 1.8rem;
+                            line-height: 6rem;
+                            color: rgba(0, 0, 0, 1);
+                        }
+                    }
+
+                    &.active {
+                        .btn {
+                            background-color: rgba(151, 27, 30, 1);
+
+                            .txt {
+                                font-weight: 600;
+                                color: rgba(255, 255, 255, 1);
+                            }
+                        }
+                    }
+                }
+
+                ~.a_tab-page {
+                    margin-top: 5rem;
+                }
+            }
+
+            .a_tab-page {
+                .l_tab-page {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    &.d2 {
+        &.base {
+            width: 100%;
+            max-width: 120rem;
+
+            .w_tab {
+                display: flex;
+                border-top: .1rem solid rgba(151, 27, 30, 1);
+                border-bottom: .1rem solid rgba(151, 27, 30, 1);
+
+                .l_tab {
+                    flex: 1;
+
+                    .btn {
+                        position: relative;
+                        display: inline-block;
+                        width: 100%;
+                        height: 6rem;
+                        text-align: center;
+
+                        .txt {
+                            font-size: 1.8rem;
+                            font-weight: 400;
+                            color: rgba(34, 34, 34, 1);
+                        }
+
+                        &::after {
+                            content: "";
+                            display: none;
+                            width: 0;
+                            height: 0;
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -7px;
+                            bottom: 0;
+                            border-bottom: 8px solid #971b1e;
+                            border-left: 8px solid transparent;
+                            border-right: 8px solid transparent;
+                        }
+                    }
+
+                    &.active {
+                        .btn {
+                            .txt {
+                                font-weight: 600;
+                                color: rgba(151, 27, 30, 1);
+                            }
+
+                            &::after {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                ~.a_tab-page {
+                    margin-top: 4rem;
+                }
+            }
+
+            .a_tab-page {
+                .l_tab-page {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -42,27 +42,20 @@ function detailView() {
                 detailViewArea.classList.remove('active')
             } else {
                 btn.innerHTML = closeIcon
-                detailViewArea.style.height = detailViewWrapH + 'px'
+                const contentsInnerH = detailViewArea.closest('.i_contents').offsetHeight
+                if (detailViewWrapH < contentsInnerH) {
+                    detailViewArea.style.height = detailViewWrapH + 'px'
+                } else {
+                    detailViewArea.style.height = '100%'
+                    detailViewArea.style.overflow = 'auto'
+                }
                 detailViewArea.classList.add('active')
-            }
-        })
-    })
-
-    //Copy 기능
-    const detailViewArea = document.querySelector('.a_contents')
-    const componentName = detailViewArea.getAttribute('data-comp')
-    const copyBtn = detailViewArea.querySelectorAll('.l_btn')
-
-    copyBtn.forEach(btn => {
-        btn.addEventListener('click', function () {
-            if (this.classList.contains('copyHTML')) {
-            } else if (this.classList.contains('copyCSS')) {
-            } else if (this.classList.contains('copyJS')) {
             }
         })
     })
 }
 
+// 필터 기능
 function filterBtn() {
     const filterBtn = document.querySelectorAll('.a_header .a_filter .btn')
 
@@ -71,4 +64,22 @@ function filterBtn() {
             this.classList.toggle('active')
         })
     });
+}
+
+// 가이드 메뉴 Active 기능
+function menuActive() {
+    const compArea = document.querySelector('.a_component')
+    const sideArea = document.querySelector('.a_side')
+    const menu = sideArea.querySelectorAll('.l_menu')
+    const tit = compArea.querySelector('.tit').innerText
+
+    menu.forEach(item => {
+        const menuName = item.querySelector('.btn').innerText
+        if (menuName == tit) {
+            item.classList.add('active')
+        } else {
+            item.classList.remove('active');
+        }
+    });
+
 }

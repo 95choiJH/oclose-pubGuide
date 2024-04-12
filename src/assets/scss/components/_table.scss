@@ -1,0 +1,48 @@
+.table {
+    &.d1 {
+        &.base {
+            width: 100%;
+            border-top: 2px solid rgba(51, 51, 51, 1);
+
+            tbody {
+                tr {
+                    border-bottom: 1px solid rgba(230, 230, 230, 1);
+
+                    th {
+                        position: relative;
+                        padding: 2.5rem 0;
+                        text-align: center;
+
+                        .txt {
+                            font-weight: 600;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            width: 0.1rem;
+                            height: 2rem;
+                            background-color: rgba(230, 230, 230, 1);
+                        }
+                    }
+
+                    td {
+                        padding: 2.5rem 0;
+                        padding-left: 3rem;
+
+                        .txt {
+                            font-weight: 400;
+                        }
+                    }
+
+                    .txt {
+                        font-size: 1.8rem;
+                        line-height: 1;
+                        color: rgba(85, 85, 85, 1);
+                    }
+                }
+            }
+        }
+    }
+}

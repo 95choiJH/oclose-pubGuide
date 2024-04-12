@@ -1,6 +1,6 @@
 function swiperD1Base() {
     const progressLine = document.querySelector('.progress-bar svg')
-    const swiper = new Swiper('.a_swiper', {
+    var swiperD1Base = new Swiper('.swiperCustom.d1.base .a_swiper', {
         effect: 'fade',
         loop: 'true',
         autoplay: {
@@ -40,12 +40,39 @@ function swiperD1Base() {
 
         if (!controllRemote.classList.contains('pause')) {
             controllRemote.classList.add('pause')
-            swiper.autoplay.pause()
+            swiperD1Base.autoplay.pause()
             controllerBtn.innerHTML = controllRemoteSvg
         } else {
             controllRemote.classList.remove('pause')
-            swiper.autoplay.resume()
+            swiperD1Base.autoplay.resume()
             controllerBtn.innerHTML = controllRemoteSvg
         }
+    })
+}
+
+function swiperD2Base() {
+    new Swiper('.swiperCustom.d2.base .a_swiper', {
+        slidesPerView: 'auto',
+        loop: 'true',
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false
+        },
+    })
+}
+
+function swiperD3Base() {
+    new Swiper('.swiperCustom.d3.base .a_swiper', {
+        slidesPerView: 'auto',
+        loop: 'true',
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".btn-next",
+            prevEl: ".btn-prev",
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false
+        },
     })
 }

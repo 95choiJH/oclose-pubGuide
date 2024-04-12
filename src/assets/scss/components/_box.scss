@@ -1,0 +1,71 @@
+.box-group {
+    &.d1 {
+        &.base {
+            width: 100%;
+            max-width: 120rem;
+
+            .w_box {
+                display: flex;
+                flex-wrap: wrap;
+
+                .l_box {
+                    width: calc((100% - 3rem)/3);
+
+                    >.link {
+                        display: inline-block;
+                        height: 100%;
+                        padding: 3rem 2rem;
+                        border: .1rem solid rgba(224, 224, 224, 1);
+
+                        .a_top {
+                            margin-bottom: 2rem;
+
+                            .sort {
+                                display: block;
+                                font-size: 1.6rem;
+                                font-weight: 600;
+                                color: rgba(160, 14, 21, 1);
+
+                                ~.tit {
+                                    margin-top: 1.5rem;
+                                }
+                            }
+
+                            .tit {
+                                min-height: 8.4rem;
+                                font-size: 2.4rem;
+                                line-height: 2.8rem;
+                                font-weight: 400;
+                                color: rgba(0, 0, 0, 1);
+                                word-break: keep-all;
+                                @include ellipsis(3);
+                            }
+                        }
+
+                        .a_bot {
+                            .txt {
+                                font-size: 1.6rem;
+                                line-height: 2rem;
+                                font-weight: 300;
+                                color: rgba(130, 130, 130, 1);
+                                @include ellipsis(5);
+                            }
+                        }
+                    }
+
+                    +.l_box {
+                        margin-left: 1.5rem;
+                    }
+
+                    &:nth-child(3n + 1) {
+                        margin-left: 0;
+                    }
+
+                    &:nth-child(n+4) {
+                        padding-top: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

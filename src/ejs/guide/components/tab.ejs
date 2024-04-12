@@ -2,43 +2,16 @@
 <html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Oclose Publishing Markup Guide</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Bebas+Neue&family=Saira+Stencil+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"" rel=" stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            guideCommon.Html.reset();
-        })
-    </script>
-
-    <script src="../../assets/js/_common.js"></script>
-    <script src="../../assets/js/_button.js"></script>
-    <script src="../../assets/js/_header.js"></script>
-    <script src="../../assets/js/_swiper.js"></script>
-    <script src="../../assets/js/_tab.js"></script>
-
-    <script type="module">
-        import {
-            copyFunction
-        } from '../../assets/js/_module.js';
-        copyFunction();
-    </script>
+    <%-include('../include/_guide.head.ejs') %>
+    <%-include('../include/_guide.script.ejs') %>
+    
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             detailView();
             filterBtn();
             menuActive();
-            swiperD1Base();
-            swiperD2Base();
-            swiperD3Base();
+            TabD1Base();      
+            TabD2Base();      
         });
     </script>
 </head>
@@ -47,43 +20,7 @@
     <div class="wrap">
         <section class="section component">
             <div class="i_component">
-                <article class="article a_side">
-                    <div class="i_side">
-                        <div class="a_top">
-                            <div class="a_logo">
-                                <strong class="logo">O</strong>
-                            </div>
-                        </div>
-                        <div class="a_bottom">
-                            <nav class="a_menu">
-                                <ul class="w_menu">
-                                    <li class="l_menu">
-                                        <a href="../components/box.html" class="btn">Box</a>
-                                    </li>
-                                    <li class="l_menu">
-                                        <a href="../components/button.html" class="btn">Button</a>
-                                    </li>
-                                    <li class="l_menu">
-                                        <a href="../components/form.html" class="btn">Form</a>
-                                    </li>
-                                    <li class="l_menu">
-                                        <a href="../components/header.html" class="btn">Header</a>
-                                    </li>
-                                    <li class="l_menu">
-                                        <a href="../components/swiper.html" class="btn">Swiper</a>
-                                    </li>
-                                    <li class="l_menu">
-                                        <a href="../components/tab.html" class="btn">Tab</a>
-                                    </li>
-                                    <li class="l_menu">
-                                        <a href="../components/table.html" class="btn">Table</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <span class="copyright">Oclose - Pub Guide</span>
-                        </div>
-                    </div>
-                </article>
+                <%-include('../include/_guide.component.side.ejs') %>
                 <div class="a_popup copyPop">
                     <div class="w_popup">
                         <p class="txt">코드가 성공적으로 복사되었습니다.</p>
@@ -93,7 +30,7 @@
                     <div class="a_header">
                         <div class="a_tit">
                             <span class="cate">component guide</span>
-                            <div class="tit">Swiper</div>
+                            <div class="tit">Tab</div>
                         </div>
                         <div class="a_aside">
                             <div class="a_filter">
@@ -102,68 +39,72 @@
                                 <button class="btn">navigation</button>
                             </div>
                             <div class="a_noti">
-                                <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eos aut officiis ut nam deleniti consequatur, vitae excepturi in ex nostrum dolorum beatae non nobis laudantium magnam voluptatem perferendis. Optio, repudiandae eius provident cumque recusandae maiores? Tempore, quae minus voluptas, maiores pariatur fugit, omnis placeat aut repudiandae quas odit praesentium.</p>
+                                <p class="txt">
+                                    해당 컴포넌트에 쓰인 default 폰트는 임의로 <strong class="accent">"Pretendard"</strong> 설정
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="a_contents swiperCustom">
+                    <div class="a_contents header">
                         <ul class="w_contents">
-                            <li class="l_contents" data-copy="SwiperD1Base">
-                                <div class="i_contents" style="height: 70.8rem;">
-                                    <!-- swiperCustom design1 base-->
-                                    <div class="swiperCustom d1 base">
-                                        <div class="swiper a_swiper">
-                                            <div class="swiper-wrapper w_swiper">
-                                                <div class="swiper-slide s_swiper">
-                                                    <img src="https://unsplash.it/1676/708" alt=" ">
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <img src="https://unsplash.it/1677/708" alt=" ">
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <img src="https://unsplash.it/1678/708" alt=" ">
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <img src="https://unsplash.it/1679/708" alt=" ">
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <img src="https://unsplash.it/1680/708" alt=" ">
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <img src="https://unsplash.it/1681/708" alt=" ">
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <img src="https://unsplash.it/1682/708" alt=" ">
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <img src="https://unsplash.it/1683/708" alt=" ">
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <img src="https://unsplash.it/1684/708" alt=" ">
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <img src="https://unsplash.it/1685/708" alt=" ">
-                                                </div>
-                                            </div>
-                                            <div class="w_pagination">
-                                                <div class="swiper-pagination a_progress">
-                                                </div>
-                                                <div class="progress-bar">
-                                                    <span class="blind">progress</span>
-                                                    <svg class="progress" viewBox="0 0 1 214" xmlns="http://www.w3.org/2000/svg">
-                                                        <line x1="0" y1="0" x2="0" y2="214" stroke="white" />
-                                                    </svg>
-                                                </div>
-                                            </div>
+                            <li class="l_contents" data-copy="TabD1Base">
+                                <div class="i_contents" style="justify-content: center;">
+                                    <!-- tab d1 base -->
+                                    <div class="tab d1 base">
+                                        <ul class="w_tab">
+                                            <li class="l_tab active">
+                                                <button class="btn">
+                                                    <span class="txt">72㎡</span>
+                                                </button>
+                                            </li>
+                                            <li class="l_tab">
+                                                <button class="btn">
+                                                    <span class="txt">76㎡</span>
+                                                </button>
+                                            </li>
+                                            <li class="l_tab">
+                                                <button class="btn">
+                                                    <span class="txt">84㎡A</span>
+                                                </button>
+                                            </li>
+                                            <li class="l_tab">
+                                                <button class="btn">
+                                                    <span class="txt">84㎡B</span>
+                                                </button>
+                                            </li>
+                                            <li class="l_tab">
+                                                <button class="btn">
+                                                    <span class="txt">84㎡C</span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div class="a_tab-page">
+                                            <ul class="w_tab-page">
+                                                <li class="l_tab-page active">
+                                                    <img src="https://unsplash.it/1200/596" alt=" " style="width: 100%;">
+                                                </li>
+                                                <li class="l_tab-page">
+                                                    <img src="https://unsplash.it/1201/596" alt=" " style="width: 100%;">
+                                                </li>
+                                                <li class="l_tab-page">
+                                                    <img src="https://unsplash.it/1202/596" alt=" " style="width: 100%;">
+                                                </li>
+                                                <li class="l_tab-page">
+                                                    <img src="https://unsplash.it/1203/596" alt=" " style="width: 100%;">
+                                                </li>
+                                                <li class="l_tab-page">
+                                                    <img src="https://unsplash.it/1204/596" alt=" " style="width: 100%;">
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <!-- // swiperCustom design1 -->
+                                    <!-- // tab d1 base -->
                                     <div class="a_guide-detailView">
                                         <ul class="w_guide-detailView">
                                             <li class="l_guide-detailView">
                                                 <em class="list tit">ClassName</em>
                                                 <ul class="list w_contents">
-                                                    <li class="content">.swiperCustom</li>
+                                                    <li class="content">.tab</li>
                                                     <li class="content">.d1</li>
                                                     <li class="content">.base</li>
                                                 </ul>
@@ -171,15 +112,15 @@
                                             <li class="l_guide-detailView">
                                                 <em class="list tit">Related</em>
                                                 <ul class="list w_contents">
-                                                    <li class="content">swiper.ejs</li>
-                                                    <li class="content">_swiper.scss</li>
-                                                    <li class="content">_swiper.js</li>
+                                                    <li class="content">tab.ejs</li>
+                                                    <li class="content">_tab.scss</li>
+                                                    <li class="content">_tab.js</li>
                                                 </ul>
                                             </li>
                                             <li class="l_guide-detailView">
                                                 <em class="list tit">function</em>
                                                 <ul class="list w_contents">
-                                                    <li class="content">swiperD1Base()</li>
+                                                    <li class="content">tabD1Base()</li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -253,100 +194,64 @@
                                     </button>
                                 </div>
                             </li>
-                            <li class="l_contents" data-copy="SwiperD2Base">
-                                <div class="i_contents reversal">
-                                    <!-- swiperCustom d2 base -->
-                                    <div class="swiperCustom d2 base">
-                                        <div class="swiper a_swiper">
-                                            <div class="swiper-wrapper w_swiper">
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <div class="a_top img-desc">
-                                                            <img src="../../assets/images/img/premium-top1.png" alt=" ">
-                                                        </div>
-                                                        <div class="a_middle">
-                                                            <img src="https://unsplash.it/420/280" alt=" ">
-                                                        </div>
-                                                        <div class="a_bot img-desc">
-                                                            <img src="../../assets/images/img/premium-bot1.png" alt=" ">
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <div class="a_top img-desc">
-                                                            <img src="../../assets/images/img/premium-top1.png" alt=" ">
-                                                        </div>
-                                                        <div class="a_middle">
-                                                            <img src="https://unsplash.it/421/280" alt=" ">
-                                                        </div>
-                                                        <div class="a_bot img-desc">
-                                                            <img src="../../assets/images/img/premium-bot1.png" alt=" ">
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <div class="a_top img-desc">
-                                                            <img src="../../assets/images/img/premium-top1.png" alt=" ">
-                                                        </div>
-                                                        <div class="a_middle">
-                                                            <img src="https://unsplash.it/422/280" alt=" ">
-                                                        </div>
-                                                        <div class="a_bot img-desc">
-                                                            <img src="../../assets/images/img/premium-bot1.png" alt=" ">
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <div class="a_top img-desc">
-                                                            <img src="../../assets/images/img/premium-top1.png" alt=" ">
-                                                        </div>
-                                                        <div class="a_middle">
-                                                            <img src="https://unsplash.it/423/280" alt=" ">
-                                                        </div>
-                                                        <div class="a_bot img-desc">
-                                                            <img src="../../assets/images/img/premium-bot1.png" alt=" ">
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <div class="a_top img-desc">
-                                                            <img src="../../assets/images/img/premium-top1.png" alt=" ">
-                                                        </div>
-                                                        <div class="a_middle">
-                                                            <img src="https://unsplash.it/424/280" alt=" ">
-                                                        </div>
-                                                        <div class="a_bot img-desc">
-                                                            <img src="../../assets/images/img/premium-bot1.png" alt=" ">
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <div class="a_top img-desc">
-                                                            <img src="../../assets/images/img/premium-top1.png" alt=" ">
-                                                        </div>
-                                                        <div class="a_middle">
-                                                            <img src="https://unsplash.it/425/280" alt=" ">
-                                                        </div>
-                                                        <div class="a_bot img-desc">
-                                                            <img src="../../assets/images/img/premium-bot1.png" alt=" ">
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
+                            <li class="l_contents" data-copy="TabD1Base">
+                                <div class="i_contents" style="justify-content: center;">
+                                    <!-- tab d2 base -->
+                                    <div class="tab d2 base">
+                                        <ul class="w_tab">
+                                            <li class="l_tab active">
+                                                <button class="btn">
+                                                    <span class="txt">기관추천</span>
+                                                </button>
+                                            </li>
+                                            <li class="l_tab">
+                                                <button class="btn">
+                                                    <span class="txt">다자녀가구</span>
+                                                </button>
+                                            </li>
+                                            <li class="l_tab">
+                                                <button class="btn">
+                                                    <span class="txt">신혼부부</span>
+                                                </button>
+                                            </li>
+                                            <li class="l_tab">
+                                                <button class="btn">
+                                                    <span class="txt">노부모부양</span>
+                                                </button>
+                                            </li>
+                                            <li class="l_tab">
+                                                <button class="btn">
+                                                    <span class="txt">생애최초</span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div class="a_tab-page">
+                                            <ul class="w_tab-page">
+                                                <li class="l_tab-page active">
+                                                    <img src="https://unsplash.it/1200/596" alt=" " style="width: 100%;">
+                                                </li>
+                                                <li class="l_tab-page">
+                                                    <img src="https://unsplash.it/1201/596" alt=" " style="width: 100%;">
+                                                </li>
+                                                <li class="l_tab-page">
+                                                    <img src="https://unsplash.it/1202/596" alt=" " style="width: 100%;">
+                                                </li>
+                                                <li class="l_tab-page">
+                                                    <img src="https://unsplash.it/1203/596" alt=" " style="width: 100%;">
+                                                </li>
+                                                <li class="l_tab-page">
+                                                    <img src="https://unsplash.it/1204/596" alt=" " style="width: 100%;">
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <!-- // swiperCustom d2 base -->
+                                    <!-- // tab d2 base -->
                                     <div class="a_guide-detailView">
                                         <ul class="w_guide-detailView">
                                             <li class="l_guide-detailView">
                                                 <em class="list tit">ClassName</em>
                                                 <ul class="list w_contents">
-                                                    <li class="content">.swiperCustom</li>
+                                                    <li class="content">.tab</li>
                                                     <li class="content">.d2</li>
                                                     <li class="content">.base</li>
                                                 </ul>
@@ -354,154 +259,15 @@
                                             <li class="l_guide-detailView">
                                                 <em class="list tit">Related</em>
                                                 <ul class="list w_contents">
-                                                    <li class="content">swiper.ejs</li>
-                                                    <li class="content">_swiper.scss</li>
-                                                    <li class="content">_swiper.js</li>
+                                                    <li class="content">tab.ejs</li>
+                                                    <li class="content">_tab.scss</li>
+                                                    <li class="content">_tab.js</li>
                                                 </ul>
                                             </li>
                                             <li class="l_guide-detailView">
                                                 <em class="list tit">function</em>
                                                 <ul class="list w_contents">
-                                                    <li class="content">swiperD2Base()</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <div class="w_btn">
-                                            <button class="l_btn copyHTML">
-                                                <svg width="92" height="32" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M95 0H31V32H95C97.7614 32 100 29.7614 100 27V5C100 2.23858 97.7614 0 95 0Z" fill="#0F1418" />
-                                                    <path d="M31 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H31V0Z" fill="#E44D26" />
-                                                    <path d="M6 4L7.86964 25.2036L16.2589 28L24.7018 25.2036L26.5714 4H6ZM22.5107 10.8518H12.6643L12.8839 13.4982H22.2911L21.5625 21.4482L16.3179 22.8946V22.9107H16.2589L10.9714 21.4482L10.65 17.3875H13.2054L13.3929 19.4286L16.2589 20.2054L19.1357 19.4286L19.4571 16.0964H10.5161L9.83036 8.29643H22.7464L22.5107 10.8518Z" fill="white" />
-                                                    <path d="M53.5698 22H51.1968V17.7227H46.8462V22H44.4805V11.4971H46.8462V15.6865H51.1968V11.4971H53.5698V22ZM64.0623 13.4233H61.0667V22H58.6937V13.4233H55.7127V11.4971H64.0623V13.4233ZM78.151 22H75.8146V15.7158C75.8146 15.0371 75.8439 14.2876 75.9025 13.4673H75.8439C75.7218 14.1118 75.612 14.5757 75.5143 14.8589L73.0534 22H71.1198L68.6149 14.9321C68.5465 14.7417 68.4367 14.2534 68.2853 13.4673H68.2194C68.2829 14.5024 68.3146 15.4106 68.3146 16.1919V22H66.1833V11.4971H69.6476L71.7936 17.7227C71.9645 18.2207 72.089 18.7212 72.1671 19.2241H72.2111C72.3429 18.6431 72.4821 18.1377 72.6286 17.708L74.7746 11.4971H78.151V22ZM87.501 22H81.2461V11.4971H83.6118V20.0811H87.501V22Z" fill="white" />
-                                                    <path d="M95 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H95C97.7614 32 100 29.7614 100 27V5C100 2.23858 97.7614 0 95 0Z" fill="url(#paint0_linear)" />
-                                                    <defs>
-                                                        <linearGradient id="paint0_linear" x1="0" y1="0" x2="0" y2="32" gradientUnits="userSpaceOnUse">
-                                                            <stop stop-color="#BBBBBB" stop-opacity="0.1" />
-                                                            <stop offset="1" stop-opacity="0.1" />
-                                                        </linearGradient>
-                                                    </defs>
-                                                </svg>
-                                                <span class="blind">마크업 복사하기</span>
-                                            </button>
-                                            <button class="l_btn copyCSS">
-                                                <svg width="92" height="32" viewBox="0 0 92 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M87 0H31V32H87C89.7614 32 92 29.7614 92 27V5C92 2.23858 89.7614 0 87 0Z" fill="#0F1418" />
-                                                    <path d="M31 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H31V0Z" fill="#3C92C7" />
-                                                    <path d="M25.0599 26.6664L16.5158 29L7.97164 26.6664L6 5H27.0319L25.0599 26.6664Z" fill="white" />
-                                                    <path d="M16.5158 6.755V27.1388L16.5351 27.1442L23.4495 25.2556L25.0454 6.755H16.5158Z" fill="white" />
-                                                    <path d="M16.5082 12.1723L10.3929 14.7557L10.5957 17.3134L16.5082 14.7492L22.7975 12.0218L23.0583 9.40527L16.5082 12.1723Z" fill="#3C9CD7" />
-                                                    <path d="M10.3929 14.7558L10.5956 17.3136L16.5082 14.7494V12.1725L10.3929 14.7558Z" fill="#3C9CD7" />
-                                                    <path d="M23.0583 9.40552L16.5081 12.1725V14.7494L22.7975 12.0219L23.0583 9.40552Z" fill="#3C9CD7" />
-                                                    <path d="M10.4023 14.7557L10.6051 17.3135L19.6771 17.3427L19.4741 20.753L16.489 21.6055L13.6193 20.8705L13.4454 18.7538H10.779L11.1268 22.8402L16.5179 24.4571L21.8798 22.8696L22.5755 14.7557H10.4023Z" fill="#3C9CD7" />
-                                                    <path d="M16.5082 14.7557H10.3929L10.5957 17.3135L16.5082 17.3325V14.7557ZM16.5082 21.5974L16.4792 21.6055L13.61 20.8706L13.4361 18.7538H10.7697L11.1175 22.8403L16.5082 24.4572V21.5974Z" fill="#3C9CD7" />
-                                                    <path d="M9.84216 9.40552H23.0583L22.7975 12.022H10.1609L9.84216 9.40552Z" fill="#3C9CD7" />
-                                                    <path opacity="0.05" d="M16.5082 9.40552H9.84216L10.1609 12.022H16.5082V9.40552Z" fill="#3C9CD7" />
-                                                    <path d="M52.0308 21.6265C51.2642 21.9976 50.2632 22.1831 49.0279 22.1831C47.4165 22.1831 46.1494 21.7095 45.2266 20.7622C44.3037 19.8149 43.8423 18.5527 43.8423 16.9756C43.8423 15.2959 44.3599 13.9336 45.395 12.8887C46.4351 11.8438 47.7827 11.3213 49.438 11.3213C50.4634 11.3213 51.3277 11.4507 52.0308 11.7095V13.9873C51.3277 13.5674 50.5269 13.3574 49.6284 13.3574C48.6421 13.3574 47.8462 13.6675 47.2407 14.2876C46.6353 14.9077 46.3325 15.7476 46.3325 16.8071C46.3325 17.8228 46.6182 18.6333 47.1895 19.2388C47.7608 19.8394 48.5298 20.1396 49.4966 20.1396C50.4195 20.1396 51.2642 19.915 52.0308 19.4658V21.6265ZM54.0858 21.5972V19.2534C54.5106 19.6099 54.972 19.8784 55.4701 20.0591C55.9681 20.2349 56.471 20.3228 56.9788 20.3228C57.2767 20.3228 57.5355 20.2959 57.7552 20.2422C57.9798 20.1885 58.1654 20.1152 58.3119 20.0225C58.4632 19.9248 58.5755 19.8125 58.6488 19.6855C58.722 19.5537 58.7586 19.4121 58.7586 19.2607C58.7586 19.0557 58.7 18.8726 58.5829 18.7114C58.4657 18.5503 58.3045 18.4014 58.0995 18.2646C57.8993 18.1279 57.66 17.9961 57.3817 17.8691C57.1034 17.7422 56.8031 17.6128 56.4808 17.481C55.6605 17.1392 55.0477 16.7217 54.6424 16.2285C54.242 15.7354 54.0418 15.1396 54.0418 14.4414C54.0418 13.8945 54.1517 13.4258 54.3714 13.0352C54.5912 12.6396 54.889 12.3149 55.265 12.061C55.6458 11.8071 56.0853 11.6216 56.5833 11.5044C57.0814 11.3823 57.6087 11.3213 58.1654 11.3213C58.7122 11.3213 59.1956 11.3555 59.6156 11.4238C60.0404 11.4873 60.431 11.5874 60.7874 11.7241V13.9141C60.6117 13.792 60.4188 13.6846 60.2088 13.5918C60.0037 13.499 59.7913 13.4233 59.5716 13.3647C59.3519 13.3013 59.1322 13.2549 58.9124 13.2256C58.6976 13.1963 58.4925 13.1816 58.2972 13.1816C58.0287 13.1816 57.7845 13.2085 57.5648 13.2622C57.3451 13.311 57.1595 13.3818 57.0081 13.4746C56.8568 13.5674 56.7396 13.6797 56.6566 13.8115C56.5736 13.9385 56.5321 14.0825 56.5321 14.2437C56.5321 14.4194 56.5785 14.5781 56.6712 14.7197C56.764 14.8564 56.8958 14.9883 57.0667 15.1152C57.2376 15.2373 57.4452 15.3594 57.6893 15.4814C57.9334 15.5986 58.2093 15.7207 58.5169 15.8477C58.9369 16.0234 59.3128 16.2114 59.6449 16.4116C59.9818 16.6069 60.2699 16.8291 60.5091 17.0781C60.7484 17.3271 60.9315 17.6128 61.0584 17.9351C61.1854 18.2524 61.2489 18.6235 61.2489 19.0483C61.2489 19.6343 61.1366 20.1274 60.912 20.5278C60.6922 20.9233 60.3919 21.2456 60.0111 21.4946C59.6302 21.7388 59.1859 21.9146 58.6781 22.022C58.1751 22.1294 57.6429 22.1831 57.0814 22.1831C56.5052 22.1831 55.9559 22.1343 55.4334 22.0366C54.9159 21.939 54.4666 21.7925 54.0858 21.5972ZM63.2013 21.5972V19.2534C63.6261 19.6099 64.0876 19.8784 64.5856 20.0591C65.0837 20.2349 65.5866 20.3228 66.0944 20.3228C66.3922 20.3228 66.651 20.2959 66.8708 20.2422C67.0954 20.1885 67.2809 20.1152 67.4274 20.0225C67.5788 19.9248 67.6911 19.8125 67.7643 19.6855C67.8376 19.5537 67.8742 19.4121 67.8742 19.2607C67.8742 19.0557 67.8156 18.8726 67.6984 18.7114C67.5812 18.5503 67.4201 18.4014 67.215 18.2646C67.0148 18.1279 66.7755 17.9961 66.4972 17.8691C66.2189 17.7422 65.9186 17.6128 65.5963 17.481C64.776 17.1392 64.1632 16.7217 63.758 16.2285C63.3576 15.7354 63.1574 15.1396 63.1574 14.4414C63.1574 13.8945 63.2672 13.4258 63.487 13.0352C63.7067 12.6396 64.0046 12.3149 64.3805 12.061C64.7614 11.8071 65.2008 11.6216 65.6989 11.5044C66.1969 11.3823 66.7243 11.3213 67.2809 11.3213C67.8278 11.3213 68.3112 11.3555 68.7311 11.4238C69.1559 11.4873 69.5465 11.5874 69.903 11.7241V13.9141C69.7272 13.792 69.5343 13.6846 69.3244 13.5918C69.1193 13.499 68.9069 13.4233 68.6872 13.3647C68.4674 13.3013 68.2477 13.2549 68.028 13.2256C67.8131 13.1963 67.6081 13.1816 67.4128 13.1816C67.1442 13.1816 66.9001 13.2085 66.6803 13.2622C66.4606 13.311 66.2751 13.3818 66.1237 13.4746C65.9723 13.5674 65.8551 13.6797 65.7721 13.8115C65.6891 13.9385 65.6476 14.0825 65.6476 14.2437C65.6476 14.4194 65.694 14.5781 65.7868 14.7197C65.8796 14.8564 66.0114 14.9883 66.1823 15.1152C66.3532 15.2373 66.5607 15.3594 66.8048 15.4814C67.049 15.5986 67.3249 15.7207 67.6325 15.8477C68.0524 16.0234 68.4284 16.2114 68.7604 16.4116C69.0973 16.6069 69.3854 16.8291 69.6247 17.0781C69.8639 17.3271 70.047 17.6128 70.174 17.9351C70.3009 18.2524 70.3644 18.6235 70.3644 19.0483C70.3644 19.6343 70.2521 20.1274 70.0275 20.5278C69.8078 20.9233 69.5075 21.2456 69.1266 21.4946C68.7458 21.7388 68.3014 21.9146 67.7936 22.022C67.2907 22.1294 66.7585 22.1831 66.1969 22.1831C65.6208 22.1831 65.0714 22.1343 64.549 22.0366C64.0314 21.939 63.5822 21.7925 63.2013 21.5972ZM72.1924 21.6558V19.6416C72.8955 20.1543 73.7158 20.4106 74.6533 20.4106C75.2441 20.4106 75.7031 20.2837 76.0303 20.0298C76.3623 19.7759 76.5283 19.4219 76.5283 18.9678C76.5283 18.499 76.3232 18.1377 75.9131 17.8838C75.5078 17.6299 74.9487 17.5029 74.2358 17.5029H73.2617V15.7305H74.1626C75.5298 15.7305 76.2134 15.2764 76.2134 14.3682C76.2134 13.5137 75.6885 13.0864 74.6387 13.0864C73.9355 13.0864 73.2519 13.3135 72.5879 13.7676V11.8779C73.3252 11.5068 74.1846 11.3213 75.166 11.3213C76.2402 11.3213 77.0752 11.563 77.6709 12.0464C78.2715 12.5298 78.5718 13.1572 78.5718 13.9287C78.5718 15.3008 77.876 16.1602 76.4844 16.5068V16.5435C77.2265 16.6362 77.8125 16.9072 78.2422 17.3564C78.6719 17.8008 78.8867 18.3477 78.8867 18.9971C78.8867 19.9785 78.5278 20.7549 77.81 21.3262C77.0923 21.8975 76.1011 22.1831 74.8364 22.1831C73.7524 22.1831 72.8711 22.0073 72.1924 21.6558Z" fill="white" />
-                                                    <path d="M87 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23857 32 5 32H87C89.7614 32 92 29.7614 92 27V5C92 2.23858 89.7614 0 87 0Z" fill="url(#paint0_linear)" />
-                                                    <defs>
-                                                        <linearGradient id="paint0_linear" x1="0" y1="0" x2="0" y2="32" gradientUnits="userSpaceOnUse">
-                                                            <stop stop-color="#BBBBBB" stop-opacity="0.1" />
-                                                            <stop offset="1" stop-opacity="0.1" />
-                                                        </linearGradient>
-                                                    </defs>
-                                                </svg>
-                                                <span class="blind">스타일 복사하기</span>
-                                            </button>
-                                            <button class="l_btn copyJS">
-                                                <svg width="92" height="32" viewBox="0 0 130 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M125 0H31V32H125C127.761 32 130 29.7614 130 27V5C130 2.23858 127.761 0 125 0Z" fill="#0F1418" />
-                                                    <path d="M31 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H31V0Z" fill="#F1C731" />
-                                                    <path d="M15.3346 28.0498C15.0155 28.0498 14.6917 27.9641 14.4107 27.8022L11.4723 26.0639C11.0342 25.8162 11.2485 25.7305 11.3913 25.6829C11.9771 25.4781 12.0962 25.4353 12.72 25.0781C12.7867 25.04 12.8724 25.0543 12.9391 25.0971L15.1965 26.4354C15.2774 26.483 15.3917 26.483 15.4679 26.4354L24.264 21.3587C24.345 21.311 24.3974 21.2158 24.3974 21.1205V10.9672C24.3974 10.8671 24.345 10.7767 24.2593 10.7243L15.4679 5.65234C15.387 5.60472 15.2774 5.60472 15.1965 5.65234L6.40989 10.729C6.32417 10.7767 6.27178 10.8719 6.27178 10.9719V21.1205C6.27178 21.2158 6.32417 21.311 6.40989 21.3539L8.81965 22.7445C10.1293 23.397 10.9294 22.6302 10.9294 21.854V11.8339C10.9294 11.691 11.0437 11.5815 11.1866 11.5815H12.3009C12.4391 11.5815 12.5581 11.691 12.5581 11.8339V21.8587C12.5581 23.6017 11.6056 24.6018 9.9531 24.6018C9.44352 24.6018 9.04348 24.6018 7.92909 24.0494L5.6241 22.7207C5.05261 22.3921 4.7002 21.7778 4.7002 21.1158V10.9672C4.7002 10.3099 5.05261 9.69084 5.6241 9.36224L14.4107 4.28554C14.9679 3.97123 15.706 3.97123 16.2585 4.28554L25.0546 9.367C25.6261 9.6956 25.9785 10.3099 25.9785 10.9719V21.1205C25.9785 21.7778 25.6261 22.3921 25.0546 22.7255L16.2585 27.8022C15.9775 27.9641 15.6584 28.0498 15.3346 28.0498ZM22.4353 18.0441C22.4353 16.1439 21.1494 15.639 18.4492 15.2819C15.7156 14.9199 15.4394 14.7342 15.4394 14.096C15.4394 13.5674 15.6727 12.8626 17.6967 12.8626C19.5017 12.8626 20.1684 13.2531 20.4446 14.4723C20.4684 14.5866 20.5732 14.6723 20.6923 14.6723H21.8352C21.9067 14.6723 21.9733 14.6437 22.021 14.5913C22.0686 14.5389 22.0924 14.4675 22.0876 14.3961C21.9114 12.2959 20.516 11.3196 17.6967 11.3196C15.1869 11.3196 13.6916 12.3768 13.6916 14.1532C13.6916 16.0772 15.1822 16.6106 17.5872 16.8487C20.4684 17.1297 20.6923 17.5535 20.6923 18.1202C20.6923 19.1013 19.9017 19.5204 18.0491 19.5204C15.7203 19.5204 15.2108 18.9346 15.0393 17.7774C15.0203 17.6535 14.9155 17.5631 14.7869 17.5631H13.6487C13.5058 17.5631 13.3963 17.6773 13.3963 17.8155C13.3963 19.2966 14.2011 21.0634 18.0539 21.0634C20.8351 21.0586 22.4353 19.9585 22.4353 18.0441V18.0441Z" fill="white" />
-                                                    <path d="M49.192 17.8325C49.192 19.2388 48.8648 20.3154 48.2105 21.0625C47.5611 21.8096 46.6187 22.1831 45.3834 22.1831C44.8316 22.1831 44.3213 22.0879 43.8526 21.8975V19.6782C44.2579 19.9858 44.712 20.1396 45.2149 20.1396C46.294 20.1396 46.8336 19.3389 46.8336 17.7373V11.4971H49.192V17.8325ZM57.8021 22H55.6122V20.9233H55.5829C55.08 21.7632 54.3353 22.1831 53.349 22.1831C52.6215 22.1831 52.0477 21.978 51.6278 21.5679C51.2128 21.1528 51.0053 20.6011 51.0053 19.9126C51.0053 18.4575 51.8671 17.6177 53.5907 17.3931L55.6268 17.1221C55.6268 16.3018 55.1825 15.8916 54.2938 15.8916C53.4003 15.8916 52.5507 16.1577 51.745 16.6899V14.9468C52.0673 14.7808 52.5067 14.6343 53.0634 14.5073C53.6249 14.3804 54.1351 14.3169 54.5941 14.3169C56.7328 14.3169 57.8021 15.3838 57.8021 17.5176V22ZM55.6268 18.9531V18.4478L54.2645 18.6235C53.5126 18.7212 53.1366 19.0605 53.1366 19.6416C53.1366 19.9053 53.2269 20.1226 53.4076 20.2935C53.5931 20.4595 53.8422 20.5425 54.1547 20.5425C54.5892 20.5425 54.9432 20.3936 55.2167 20.0957C55.4901 19.793 55.6268 19.4121 55.6268 18.9531ZM66.9543 14.5L64.1638 22H61.5271L58.8684 14.5H61.3439L62.6477 19.1216C62.7941 19.644 62.8796 20.0884 62.904 20.4546H62.9333C62.9675 20.1079 63.0578 19.6782 63.2043 19.1655L64.5373 14.5H66.9543ZM74.1289 22H71.939V20.9233H71.9097C71.4068 21.7632 70.6621 22.1831 69.6758 22.1831C68.9483 22.1831 68.3745 21.978 67.9546 21.5679C67.5396 21.1528 67.3321 20.6011 67.3321 19.9126C67.3321 18.4575 68.1939 17.6177 69.9175 17.3931L71.9536 17.1221C71.9536 16.3018 71.5093 15.8916 70.6206 15.8916C69.7271 15.8916 68.8775 16.1577 68.0718 16.6899V14.9468C68.3941 14.7808 68.8335 14.6343 69.3902 14.5073C69.9517 14.3804 70.4619 14.3169 70.9209 14.3169C73.0596 14.3169 74.1289 15.3838 74.1289 17.5176V22ZM71.9536 18.9531V18.4478L70.5913 18.6235C69.8394 18.7212 69.4634 19.0605 69.4634 19.6416C69.4634 19.9053 69.5537 20.1226 69.7344 20.2935C69.9199 20.4595 70.169 20.5425 70.4815 20.5425C70.916 20.5425 71.27 20.3936 71.5435 20.0957C71.8169 19.793 71.9536 19.4121 71.9536 18.9531ZM76.1473 21.5972V19.2534C76.5721 19.6099 77.0335 19.8784 77.5316 20.0591C78.0296 20.2349 78.5326 20.3228 79.0404 20.3228C79.3382 20.3228 79.597 20.2959 79.8167 20.2422C80.0413 20.1885 80.2269 20.1152 80.3734 20.0225C80.5247 19.9248 80.6371 19.8125 80.7103 19.6855C80.7835 19.5537 80.8202 19.4121 80.8202 19.2607C80.8202 19.0557 80.7616 18.8726 80.6444 18.7114C80.5272 18.5503 80.3661 18.4014 80.161 18.2646C79.9608 18.1279 79.7215 17.9961 79.4432 17.8691C79.1649 17.7422 78.8646 17.6128 78.5423 17.481C77.722 17.1392 77.1092 16.7217 76.7039 16.2285C76.3036 15.7354 76.1034 15.1396 76.1034 14.4414C76.1034 13.8945 76.2132 13.4258 76.4329 13.0352C76.6527 12.6396 76.9505 12.3149 77.3265 12.061C77.7074 11.8071 78.1468 11.6216 78.6449 11.5044C79.1429 11.3823 79.6703 11.3213 80.2269 11.3213C80.7738 11.3213 81.2572 11.3555 81.6771 11.4238C82.1019 11.4873 82.4925 11.5874 82.849 11.7241V13.9141C82.6732 13.792 82.4803 13.6846 82.2704 13.5918C82.0653 13.499 81.8529 13.4233 81.6331 13.3647C81.4134 13.3013 81.1937 13.2549 80.974 13.2256C80.7591 13.1963 80.554 13.1816 80.3587 13.1816C80.0902 13.1816 79.846 13.2085 79.6263 13.2622C79.4066 13.311 79.221 13.3818 79.0697 13.4746C78.9183 13.5674 78.8011 13.6797 78.7181 13.8115C78.6351 13.9385 78.5936 14.0825 78.5936 14.2437C78.5936 14.4194 78.64 14.5781 78.7328 14.7197C78.8255 14.8564 78.9574 14.9883 79.1283 15.1152C79.2992 15.2373 79.5067 15.3594 79.7508 15.4814C79.995 15.5986 80.2708 15.7207 80.5785 15.8477C80.9984 16.0234 81.3744 16.2114 81.7064 16.4116C82.0433 16.6069 82.3314 16.8291 82.5706 17.0781C82.8099 17.3271 82.993 17.6128 83.12 17.9351C83.2469 18.2524 83.3104 18.6235 83.3104 19.0483C83.3104 19.6343 83.1981 20.1274 82.9735 20.5278C82.7537 20.9233 82.4535 21.2456 82.0726 21.4946C81.6917 21.7388 81.2474 21.9146 80.7396 22.022C80.2367 22.1294 79.7044 22.1831 79.1429 22.1831C78.5667 22.1831 78.0174 22.1343 77.495 22.0366C76.9774 21.939 76.5282 21.7925 76.1473 21.5972ZM90.9391 21.729C90.4167 22.0317 89.6623 22.1831 88.6759 22.1831C87.5236 22.1831 86.591 21.834 85.8781 21.1357C85.1652 20.4375 84.8088 19.5366 84.8088 18.4331C84.8088 17.1587 85.1896 16.1553 85.9513 15.4229C86.7179 14.6855 87.7409 14.3169 89.0202 14.3169C89.904 14.3169 90.5436 14.4341 90.9391 14.6685V16.6313C90.4557 16.27 89.9162 16.0894 89.3205 16.0894C88.6564 16.0894 88.1291 16.2847 87.7384 16.6753C87.3527 17.061 87.1598 17.5957 87.1598 18.2793C87.1598 18.9434 87.3454 19.4658 87.7165 19.8467C88.0876 20.2227 88.5978 20.4106 89.2472 20.4106C89.8234 20.4106 90.3874 20.23 90.9391 19.8687V21.729ZM97.5351 16.5874C97.2568 16.436 96.9321 16.3604 96.561 16.3604C96.0581 16.3604 95.665 16.5459 95.3818 16.917C95.0986 17.2832 94.957 17.7837 94.957 18.4185V22H92.6426V14.5H94.957V15.8916H94.9863C95.3525 14.876 96.0117 14.3682 96.9638 14.3682C97.208 14.3682 97.3984 14.3975 97.5351 14.4561V16.5874ZM100.03 13.3135C99.639 13.3135 99.3191 13.1987 99.0701 12.9692C98.8211 12.7349 98.6966 12.4492 98.6966 12.1123C98.6966 11.7656 98.8211 11.4824 99.0701 11.2627C99.3191 11.043 99.639 10.9331 100.03 10.9331C100.425 10.9331 100.745 11.043 100.989 11.2627C101.238 11.4824 101.363 11.7656 101.363 12.1123C101.363 12.4639 101.238 12.752 100.989 12.9766C100.745 13.2012 100.425 13.3135 100.03 13.3135ZM101.172 22H98.8577V14.5H101.172V22ZM105.644 21.1284H105.615V25.4497H103.3V14.5H105.615V15.6279H105.644C106.215 14.7539 107.019 14.3169 108.054 14.3169C109.026 14.3169 109.775 14.6514 110.302 15.3203C110.835 15.9844 111.101 16.8901 111.101 18.0376C111.101 19.2876 110.791 20.291 110.171 21.0479C109.555 21.8047 108.735 22.1831 107.71 22.1831C106.806 22.1831 106.118 21.8315 105.644 21.1284ZM105.578 18.0522V18.6528C105.578 19.1704 105.715 19.5928 105.988 19.9199C106.262 20.2471 106.621 20.4106 107.065 20.4106C107.592 20.4106 108 20.208 108.288 19.8027C108.581 19.3926 108.728 18.814 108.728 18.0669C108.728 16.7485 108.215 16.0894 107.19 16.0894C106.716 16.0894 106.328 16.27 106.025 16.6313C105.727 16.9878 105.578 17.4614 105.578 18.0522ZM117.316 21.9121C116.974 22.0928 116.459 22.1831 115.77 22.1831C114.14 22.1831 113.324 21.3359 113.324 19.6416V16.2065H112.108V14.5H113.324V12.8813L115.631 12.2222V14.5H117.316V16.2065H115.631V19.2388C115.631 20.02 115.941 20.4106 116.561 20.4106C116.806 20.4106 117.057 20.3398 117.316 20.1982V21.9121Z" fill="white" />
-                                                    <path d="M125 0H5C2.23858 0 0 2.23858 0 5V27C0 29.7614 2.23858 32 5 32H125C127.761 32 130 29.7614 130 27V5C130 2.23858 127.761 0 125 0Z" fill="url(#paint0_linear)" />
-                                                    <defs>
-                                                        <linearGradient id="paint0_linear" x1="0" y1="0" x2="0" y2="32" gradientUnits="userSpaceOnUse">
-                                                            <stop stop-color="#BBBBBB" stop-opacity="0.1" />
-                                                            <stop offset="1" stop-opacity="0.1" />
-                                                        </linearGradient>
-                                                    </defs>
-                                                </svg>
-                                                <span class="blind">스크립트 복사하기</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w_guide-detail">
-                                    <button class="a_button detail">
-                                        <svg width="24" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="11" cy="11" r="7" stroke="#ffffff" stroke-width="2" />
-                                            <path d="M20 20L17 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
-                                        </svg>
-                                        <span class="blind">자세히보기/닫기</span>
-                                    </button>
-                                </div>
-                            </li>
-                            <li class="l_contents" data-copy="SwiperD3Base">
-                                <div class="i_contents reversal">
-                                    <!-- swiperCustom d3 base -->
-                                    <div class="swiperCustom d3 base">
-                                        <div class="swiper a_swiper">
-                                            <div class="swiper-wrapper w_swiper">
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <img src="https://unsplash.it/452/320" alt=" ">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <img src="https://unsplash.it/453/320" alt=" ">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <img src="https://unsplash.it/454/320" alt=" ">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <img src="https://unsplash.it/455/320" alt=" ">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <img src="https://unsplash.it/456/320" alt=" ">
-                                                    </a>
-                                                </div>
-                                                <div class="swiper-slide s_swiper">
-                                                    <a href="#/" class="link">
-                                                        <img src="https://unsplash.it/457/320" alt=" ">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="a_btn">
-                                                <div class="btn btn-prev"></div>
-                                                <div class="btn btn-next"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- // swiperCustom d3 base -->
-                                    <div class="a_guide-detailView">
-                                        <ul class="w_guide-detailView">
-                                            <li class="l_guide-detailView">
-                                                <em class="list tit">ClassName</em>
-                                                <ul class="list w_contents">
-                                                    <li class="content">.swiperCustom</li>
-                                                    <li class="content">.d3</li>
-                                                    <li class="content">.base</li>
-                                                </ul>
-                                            </li>
-                                            <li class="l_guide-detailView">
-                                                <em class="list tit">Related</em>
-                                                <ul class="list w_contents">
-                                                    <li class="content">swiper.ejs</li>
-                                                    <li class="content">_swiper.scss</li>
-                                                    <li class="content">_swiper.js</li>
-                                                </ul>
-                                            </li>
-                                            <li class="l_guide-detailView">
-                                                <em class="list tit">function</em>
-                                                <ul class="list w_contents">
-                                                    <li class="content">swiperD3Base()</li>
+                                                    <li class="content">tabD2Base()</li>
                                                 </ul>
                                             </li>
                                         </ul>

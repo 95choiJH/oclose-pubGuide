@@ -93,6 +93,7 @@
 
                             .l_menu {
                                 .btn {
+                                    font-family: "Bebas Neue", sans-serif;
                                     font-size: 5rem;
                                     font-weight: 300;
                                     line-height: 7.5rem;
@@ -113,6 +114,7 @@
                         }
 
                         .copyright {
+                            font-family: "Bebas Neue", sans-serif;
                             display: inline-block;
                             color: #091540;
                             font-size: 2rem;
@@ -185,6 +187,7 @@
                         }
 
                         .cate {
+                            font-family: "Bebas Neue", sans-serif;
                             color: rgba(118, 146, 255, 1);
                             font-size: 3.9rem;
                             line-height: 4.1rem;
@@ -195,6 +198,7 @@
                         }
 
                         .tit {
+                            font-family: "Bebas Neue", sans-serif;
                             color: rgba(61, 81, 140, 1);
                             font-size: 8.4rem;
                             line-height: 8.4rem;
@@ -241,6 +245,7 @@
 
                         .a_noti {
                             min-width: 100rem;
+                            text-align: right;
 
                             .txt {
                                 font-family: "Pretendard";
@@ -248,6 +253,10 @@
                                 font-weight: 400;
                                 line-height: 2.4rem;
                                 color: rgba(0, 0, 0, 1);
+
+                                .accent {
+                                    font-weight: 700;
+                                }
                             }
 
                             @include mobile {
@@ -273,6 +282,7 @@
 
                 .a_contents {
                     position: relative;
+                    width: 100%;
                     height: 100%;
                     padding-left: 2rem;
                     padding-top: 14.5rem;
@@ -281,18 +291,141 @@
                     .w_contents {
                         height: 100%;
                         margin-top: 2rem;
+                        overflow-x: hidden;
                         overflow-y: auto;
 
                         .l_contents {
                             position: relative;
-                            height: 100%;
                             padding-bottom: 2rem;
+                            padding-top: 5rem;
                             margin-right: 2rem;
+                            width: 100%;
+
+                            .i_contents {
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                min-height: 26.7rem;
+                                height: 100%;
+
+                                .a_guide-detailView {
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 0;
+                                    background-color: rgba(255, 255, 255, 1);
+                                    z-index: 10;
+                                    overflow: hidden;
+                                    opacity: 0;
+                                    transition: .3s ease;
+                                    box-sizing: content-box;
+
+                                    .w_guide-detailView {
+                                        display: flex;
+                                        justify-content: center;
+                                        padding: 3rem;
+                                        flex-wrap: wrap;
+                                        gap: 2rem;
+                                        border-top: .2rem solid transparent;
+                                        border-bottom: .2rem solid transparent;
+
+                                        .l_guide-detailView {
+                                            width: 43.5rem;
+                                            padding: 2rem;
+                                            border-bottom: .1rem solid rgba(9, 21, 64, 0.5);
+
+                                            .tit {
+                                                display: inline-block;
+                                                font-weight: 700;
+                                                font-size: 1.6rem;
+                                                line-height: 2.4rem;
+                                            }
+
+                                            .w_contents {
+                                                display: flex;
+
+                                                .content {
+                                                    font-weight: 400;
+                                                    font-size: 1.8rem;
+                                                    line-height: 2.7rem;
+
+                                                    +.content {
+                                                        &::before {
+                                                            margin: 0 1rem;
+                                                            color: rgb(200, 200, 200);
+                                                            font-size: 1.4rem;
+                                                            content: '|';
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .w_btn {
+                                        display: flex;
+                                        position: absolute;
+                                        top: 4.4rem;
+                                        right: 3rem;
+                                        width: 9.2rem;
+                                        flex-direction: column;
+                                        gap: 0.5rem;
+
+                                        .l_btn {
+                                            position: relative;
+                                            height: 3.2rem;
+
+                                            svg {
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                width: 100%;
+                                                height: 100%;
+                                                transform: translate(-50%, -50%);
+                                            }
+
+                                            &.hidden {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+
+                                    &.active {
+                                        padding-top: 1rem;
+                                        opacity: 1;
+
+                                        .w_guide-detailView {
+                                            border-color: rgba(9, 21, 64, 1);
+                                        }
+                                    }
+
+
+                                    &::-webkit-scrollbar {
+                                        width: 0.4rem;
+                                        border-radius: .4rem;
+                                    }
+
+                                    &::-webkit-scrollbar-thumb {
+                                        background-color: rgba(34, 34, 34, 1);
+                                        border-radius: .4rem;
+                                    }
+
+                                    &::-webkit-scrollbar-track {
+                                        background-color: rgba(235, 235, 235, 1);
+                                        border-radius: .4rem;
+                                    }
+                                }
+
+                                &.reversal {
+                                    background-color: rgb(178, 178, 178);
+                                }
+                            }
 
                             .w_guide-detail {
                                 position: absolute;
-                                top: 3rem;
-                                right: 3rem;
+                                top: 1rem;
+                                right: 1rem;
                                 z-index: 10;
 
                                 .a_button {
@@ -312,101 +445,8 @@
                                 }
                             }
 
-                            .a_guide-detailView {
-                                position: absolute;
-                                bottom: 2rem;
-                                left: 0;
-                                width: 100%;
-                                height: 0;
-                                background-color: rgba(255, 255, 255, 1);
-                                z-index: 10;
-                                overflow: hidden;
-                                opacity: 0;
-                                transition: .3s ease;
-                                box-sizing: content-box;
-
-                                .w_guide-detailView {
-                                    display: flex;
-                                    padding: 3rem;
-                                    flex-wrap: wrap;
-                                    gap: 2rem;
-                                    border-top: .2rem solid transparent;
-                                    border-bottom: .2rem solid transparent;
-
-                                    .l_guide-detailViewList {
-                                        width: 46.5rem;
-                                        padding: 2rem;
-                                        border-bottom: .1rem solid rgba(9, 21, 64, 0.5);
-
-                                        .tit,
-                                        .content {
-                                            font-family: "Pretendard";
-                                        }
-
-                                        .tit {
-                                            display: inline-block;
-                                            font-weight: 700;
-                                            font-size: 1.6rem;
-                                            line-height: 2.4rem;
-                                        }
-
-                                        .w_contents {
-                                            display: flex;
-
-                                            .content {
-                                                font-weight: 400;
-                                                font-size: 1.8rem;
-                                                line-height: 2.7rem;
-
-                                                +.content {
-                                                    &::before {
-                                                        margin: 0 1rem;
-                                                        color: rgb(200, 200, 200);
-                                                        font-size: 1.4rem;
-                                                        content: '|';
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-
-                                .w_btn {
-                                    display: flex;
-                                    position: absolute;
-                                    top: 4.4rem;
-                                    right: 3rem;
-                                    width: 9.2rem;
-                                    flex-direction: column;
-                                    gap: 0.5rem;
-
-                                    .l_btn {
-                                        position: relative;
-                                        height: 3.2rem;
-
-                                        svg {
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 50%;
-                                            width: 100%;
-                                            height: 100%;
-                                            transform: translate(-50%, -50%);
-                                        }
-
-                                        &.hidden {
-                                            display: none;
-                                        }
-                                    }
-                                }
-
-                                &.active {
-                                    padding-top: 1rem;
-                                    opacity: 1;
-
-                                    .w_guide-detailView {
-                                        border-color: rgba(9, 21, 64, 1);
-                                    }
-                                }
+                            +.l_contents {
+                                border-top: .1rem solid rgb(0, 0, 0, 0.2);
                             }
                         }
 
@@ -423,6 +463,18 @@
                         &::-webkit-scrollbar-track {
                             background-color: rgba(235, 235, 235, 1);
                             border-radius: .4rem;
+                        }
+                    }
+
+                    &.swiperCustom {
+                        .l_contents {
+                            height: 100%;
+                        }
+                    }
+
+                    &.header {
+                        .l_contents {
+                            height: auto;
                         }
                     }
                 }
